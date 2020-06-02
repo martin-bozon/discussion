@@ -75,6 +75,10 @@ form
         width: 30vw;
         background-color: rgba(238, 130, 238, 0.699);
     }
+.msg_error
+    {
+        color: red;
+    }
 /* Footer */
 footer  
     {
