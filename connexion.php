@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,20 @@
     <?php include 'include/header.php'; ?>
 
     <main>
-        <form action="connexion.php" method="POST" id="form_connexion">
-            <label for="login"><h3>Login :</h3></label>
-            <input type="text" id="login" name="login" required/>
+        <section>
+            <h1>Formulaire de Connexion</h1>
+        </section>
+        <section>
+            <form action="connexion.php" method="POST" id="form_connexion">
+                <label for="login"><h3>Login :</h3></label>
+                <input type="text" id="login" name="login" required/>
 
-            <label for="password"><h3>Mot de passe :</h3></label>
-            <input type="password" id="password" name="password" required/>
-            
-            <input type="submit" value="Connexion" name="validco"/>
-        </form>
+                <label for="password"><h3>Mot de passe :</h3></label>
+                <input type="password" id="password" name="password" required/>
+
+                <input type="submit" value="Connexion" name="validco"/>
+            </form>
+        </section>
     </main>
 
     <?php include 'include/footer.php'; ?>
