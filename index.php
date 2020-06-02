@@ -9,7 +9,6 @@
 <body>
     <?php include 'include/header.php'; ?>
 
-    <main>
         <?php
             if(isset($_SESSION["login"]))
                 {
@@ -38,9 +37,7 @@
                     </main>
         <?php
                 }
+        include 'include/footer.php'; 
         ?>
-    </main>
-
-    <?php include 'include/footer.php'; ?>
 </body>
 </html>
