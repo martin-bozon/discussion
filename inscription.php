@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    include 'include/php_inscription.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +28,19 @@
                 <input type="password" id="confpassword" name="confpassword" required/>
 
                 <input type="submit" value="Inscription" name="validinsc"/>
+
+                <?php                    
+                    if(isset($msg_error))
+                        {
+                ?>
+                            <p class="msg_error">
+                <?php
+                            echo $msg_error;
+                ?>
+                            </p>
+                <?php
+                        }
+                ?>
             </form>
         </section>
     </main>
