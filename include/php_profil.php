@@ -4,33 +4,38 @@
             header("Location:index.php");
         }
     else
-        {
-            $login = $_SESSION["login"];
-            $id = $_SESSION["id"];
-            $mdp_hash = $_SESSION["password"];
-           
-
-             if(isset($_POST["validmod"]))
-                 {
-                    $connexionbd = mysqli_connect("localhost" , "root" , "" , "discussion");
-                    $requete_info = "SELECT * FROM utilisateurs";
-                    $query = mysqli_query($connexionbd, $requete_info);
-                    $info_user = mysqli_fetch_all($query, MYSQLI_ASSOC);
-
+        {                     
+            if(isset($_POST["validmod"]) && !empty($_POST["login"]) && !empty($_POST["old_password"]))
+                 {          
+                    $mdp_hash = $_SESSION["password"];                               
                     if(password_verify($_POST["old_password"], $mdp_hash))
                         {
-                            if($_POST["login"] == $login || empty($info_user))
+                            $login = $_POST["login"];
+                            $mdp = $_POST["nw_password"];
+                        
+                            $id = $_SESSION["id"];            
+
+                            $connexionbd = mysqli_connect("localhost" , "root" , "" , "discussion");
+                            $requete_info = "SELECT * FROM utilisateurs WHERE login='$login'";
+                            $query_requete_info = mysqli_query($connexionbd, $requete_info);
+                            $info_user = mysqli_fetch_all($query_requete_info, MYSQLI_ASSOC);
+
+                            if($login == $_SESSION["login"] || empty($info_user))
                                 {
-                                    
+                                    $update_L = "UPDATE utilisateurs SET login='$login' WHERE id='$id'";
+                                    $query_update_L = mysqli_query($connexionbd, $update_L);  
+                                    $_SESSION["login"] = $login;                          
+                                    echo $_SESSION["login"];
+                                    $msg = "Login modifié";
                                 }
                             else
                                 {
-                                    $msg_error = "Ce login existe déjà";
+                                    $msg = "Ce login existe déjà";
                                 }
                         }
                     else    
                         {
-                            $msg_error = "Mauvais mot de passe";
+                            $msg = "Mauvais mot de passe";
                         }
                  }
         }
