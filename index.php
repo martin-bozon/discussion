@@ -15,7 +15,7 @@
         ?>
                     <main>
                         <section class="titre_index">
-                            <h1>Bonjour <?php echo $_SESSION["login"]; ?> viens discuter avec nos membres !</h1>
+                            <h1>Bonjour <span id="user"><?php echo $_SESSION["login"]; ?></span> viens discuter avec nos membres !</h1>
                         </section>
                         <section class="info_index">
                             <h2>Voilà un aperçu de ce qu'il s'est passé récement</h2>
@@ -29,7 +29,7 @@
         ?>
                     <main>
                         <section class="titre_index">
-                            <h1>Bonjour, bienvenue sur Discussenger</h1>
+                            <h1>Bonjour, bienvenue sur <span id="discussenger">Discussenger</span></h1>
                         </section>
                         <section class="info_index">
                             <p>Je t'invites à <a href="inscription.php">t'inscrires</a> ou à te <a href="connexion.php">connecter</a> pour vraiment rentrer dans Discussenger !</p>

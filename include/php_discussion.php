@@ -14,9 +14,9 @@
                 {
                     $date = date("d/m/Y", strtotime($message["date"]));
             ?>
-                    <section id="message_">
-                        <h4><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
-                        <p><?php echo $message["message"];?></p>
+                    <section id="message_info">
+                        <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
+                        <p id="message_"><?php echo $message["message"];?></p>
                     </section>
             <?php
                 }

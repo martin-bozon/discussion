@@ -4,13 +4,13 @@
             {
     ?>
                 <section class="HeadG">
-                    <h2><a href="index.php">Accueil</a></h2>
+                    <h2><a href="index.php">Discussenger</a></h2>
                 </section>
                 <section class="HeadD">
                 <h2><a href="profil.php">Profil</a></h2>
                 <h2><a href="discussion.php">Discussion</a></h2>
                     <form id="form_deco" method="POST">
-                        <input type="submit" name="deco" value="Déconnexion"/>
+                        <input type="submit" name="deco" value="Déconnexion" class="bouton"/>
                     </form>
                 </section>
     <?php
@@ -24,7 +24,7 @@
             {
     ?>  
                 <section class="HeadG">
-                    <h2><a href="index.php">Accueil</a></h2>
+                    <h2><a href="index.php">Discussenger</a></h2>
                 </section>
                 <section class="HeadD">
                     <h2><a href="inscription.php">Inscription</a>

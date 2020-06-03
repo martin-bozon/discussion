@@ -14,7 +14,7 @@
             $date = date("d/m/Y" , strtotime($last_msg[0]["date"]));
     ?>
             <section id="last_message">
-                <h4><?php echo $last_msg[0]["login"];?> le <i><?php echo $date;?></i> :</h4>
+                <h4 class="info_msg"><?php echo $last_msg[0]["login"];?> le <i><?php echo $date;?></i> :</h4>
                 <p><?php echo $last_msg[0]["message"];?></p>
             </section>
     <?php
