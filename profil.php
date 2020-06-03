@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    include 'include/php_profil.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +19,7 @@
         <section>
             <form action="profil.php" method="POST" id="form_profil">
                 <label for="login"><h3>Login :</h3></label>
-                <input type="text" id="login" name="login"/>
+                <input type="text" id="login" name="login" value="<?php echo $login ?>"/>
 
                 <label for="old_password"><h3>Ancien Mot de passe :</h3></label>
                 <input type="password" id="old_password" name="old_password"/>
@@ -28,6 +31,18 @@
                 <input type="password" id="conf_password" name="conf_password"/>
 
                 <input type="submit" value="Modifier" name="validmod"/>
+                
+                <?php if(isset($msg_error))
+                        {
+                ?>
+                            <p class="msg_error">
+                <?php
+                            echo $msg_error;
+                ?>
+                            </p>
+                <?php
+                        }
+                ?>
             </form>
         </section>
     </main>
