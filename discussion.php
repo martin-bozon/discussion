@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    include 'include/php_discussion.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,7 @@
 
     <main>
         <section>
-            <!-- insérer include php_discussion -->
+            <!-- affichage des messages -->
         </section>
         <section>
             <form action="discussion.php" method="POST" id="form_discussion">
