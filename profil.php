@@ -33,16 +33,18 @@
                 <input type="submit" value="Modifier" name="validmod"/>
                 
                 <?php                     
-                    if(isset($msg))
-                            {
-                ?>
-                                <p class="msg_error">
-                <?php
-                                echo $msg;
-                ?>
-                                </p>
-                <?php
-                            }
+                    if(isset($msg_login))
+                        {
+                            echo "<span class='msg_error'>" . $msg_login . "</span><br/>";
+                        }
+                    if(isset($msg_mdp))
+                        {
+                            echo "<span class='msg_error'>" . $msg_mdp . "</span><br/>";
+                        }
+                    if(isset($msg_error))
+                        {
+                            echo "<span class='msg_error'>" . $msg_error . "</span>";
+                        }
                 ?>
             </form>
         </section>

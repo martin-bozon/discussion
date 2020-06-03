@@ -6,9 +6,8 @@
     else
         {                     
             if(isset($_POST["validmod"]) && !empty($_POST["login"]) && !empty($_POST["old_password"]))
-                 {          
-                    $mdp_hash = $_SESSION["password"];                               
-                    if(password_verify($_POST["old_password"], $mdp_hash))
+                 {                                                        
+                    if(password_verify($_POST["old_password"], $_SESSION["password"]))
                         {
                             $login = $_POST["login"];
                             $mdp = $_POST["nw_password"];
@@ -24,18 +23,28 @@
                                 {
                                     $update_L = "UPDATE utilisateurs SET login='$login' WHERE id='$id'";
                                     $query_update_L = mysqli_query($connexionbd, $update_L);  
-                                    $_SESSION["login"] = $login;                          
-                                    echo $_SESSION["login"];
-                                    $msg = "Login modifié";
+                                    $_SESSION["login"] = $login;                                                              
+                                    $msg_login = "Login modifié";                                    
                                 }
                             else
                                 {
-                                    $msg = "Ce login existe déjà";
+                                    $msg_error = "Ce login existe déjà";
                                 }
+                            if(isset($mdp) && !empty($mdp))  
+                                {
+                                    if($mdp == $_POST["conf_password"])
+                                        {
+                                            $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+                                            $update_mdp = "UPDATE utilisateurs SET password='$mdp_hash' WHERE id='$id'";
+                                            $query_update_mdp = mysqli_query($connexionbd, $update_mdp);  
+                                            $_SESSION["password"] = $mdp_hash;                                         
+                                            $msg_mdp = "Mot de passe modifié";
+                                        }
+                                }                          
                         }
                     else    
                         {
-                            $msg = "Mauvais mot de passe";
+                            $msg_error = "Mauvais mot de passe";
                         }
                  }
         }
