@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    include 'include/php_connexion.php';    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +25,18 @@
                 <input type="password" id="password" name="password" required/>
 
                 <input type="submit" value="Connexion" name="validco"/>
+
+                <?php if(isset($msg_error))
+                        {
+                ?>
+                            <p class="msg_error">
+                <?php
+                            echo $msg_error;
+                ?>
+                            </p>
+                <?php
+                        }
+                ?>
             </form>
         </section>
     </main>

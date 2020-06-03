@@ -9,7 +9,7 @@
                 <section class="HeadD">
                 <h2><a href="profil.php">Profil</a></h2>
                 <h2><a href="discussion.php">Discussion</a></h2>
-                    <form id="deco">
+                    <form id="form_deco" method="POST">
                         <input type="submit" name="deco" value="Déconnexion"/>
                     </form>
                 </section>
