@@ -20,6 +20,7 @@
                             <section id="message_user">
                                 <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
                                 <p id="user_message"><?php echo $message["message"];?></p>
+                                <a href="include/suppression.php?id_message=<?php echo $message["id"];?>">imgage</a>
                             </section>
                     <?php
                         }
