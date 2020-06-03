@@ -13,12 +13,25 @@
             foreach($info_msg as $message)
                 {
                     $date = date("d/m/Y", strtotime($message["date"]));
-            ?>
-                    <section id="message_info">
-                        <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
-                        <p id="message_"><?php echo $message["message"];?></p>
-                    </section>
-            <?php
+
+                    if($message["login"] == $_SESSION["login"])
+                        {
+                    ?>
+                            <section id="message_user">
+                                <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
+                                <p id="user_message"><?php echo $message["message"];?></p>
+                            </section>
+                    <?php
+                        }
+                    else
+                        {
+                    ?>
+                            <section id="message_info">
+                                <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
+                                <p id="message_"><?php echo $message["message"];?></p>
+                            </section>
+                    <?php
+                        }        
                 }
         
             if(isset($_POST["validcom"]) && !empty($_POST["msg_"]))
