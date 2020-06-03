@@ -10,7 +10,7 @@
     <?php include 'include/header.php'; ?>
 
     <main>
-        <section>
+        <section id="espace_message">
             <?php include 'include/php_discussion.php';?>
         </section>
         <section>

@@ -19,7 +19,7 @@
                         </section>
                         <section class="info_index">
                             <h2>Voilà un aperçu de ce qu'il s'est passé récement</h2>
-                            <!-- Afficher le dernier message poster -->
+                            <?php include 'include/php_index.php';?>
                         </section>
                     </main>
         <?php

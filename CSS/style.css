@@ -50,6 +50,13 @@ main
         align-items: center;
         justify-content: center;
     }
+#info_index
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 form    
     {
         display: flex;
@@ -82,6 +89,33 @@ form
 #pas_i a:hover
     {
         color: blue;
+    }
+/* Message */
+#espace_message
+    {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        width: 50vw;
+        overflow-y: scroll;
+        margin-top: 5vh;
+        border: 1px solid black;
+    }
+#message_
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid rgb(1, 124, 73);
+        width: 100%;
+    }
+#last_message
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid rgb(1, 124, 73);
+        width: 100%;
     }
 /* Footer */
 footer  

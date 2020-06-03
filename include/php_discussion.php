@@ -14,8 +14,8 @@
                 {
                     $date = date("d/m/Y", strtotime($message["date"]));
             ?>
-                    <section id="espace_message">
-                        <h4>Posté le <?php echo $date;?> par <?php echo $message["login"];?> :</h4>
+                    <section id="message_">
+                        <h4><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
                         <p><?php echo $message["message"];?></p>
                     </section>
             <?php
@@ -23,7 +23,7 @@
         
             if(isset($_POST["validcom"]) && !empty($_POST["msg_"]))
                 {
-                    $msg = $_POST["msg_"];
+                    $msg = addslashes($_POST["msg_"]);
                     $id = $_SESSION["id"];
                     
                     $insert_msg = "INSERT INTO messages (message, id_utilisateur, date) VALUES ('$msg', '$id', NOW())";
