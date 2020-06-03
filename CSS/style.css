@@ -79,6 +79,10 @@ form
     {
         color: red;
     }
+#pas_i a:hover
+    {
+        color: blue;
+    }
 /* Footer */
 footer  
     {

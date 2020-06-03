@@ -39,6 +39,9 @@
                 ?>
             </form>
         </section>
+        <section>
+            <p id="pas_i">Tu n'as pas encore de compte ? => <a href="inscriptio.php">Inscris toi !</a></p>            
+        </section>
     </main>
 
     <?php include 'include/footer.php'; ?>
