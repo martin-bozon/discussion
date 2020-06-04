@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 03 juin 2020 à 14:00
+-- Généré le :  jeu. 04 juin 2020 à 12:10
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -35,20 +35,21 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `id_utilisateur` int(11) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `messages`
 --
 
 INSERT INTO `messages` (`id`, `message`, `id_utilisateur`, `date`) VALUES
-(1, 'message\r\nun deux', 4, '2020-06-03'),
-(2, 'blabla', 4, '2020-06-03'),
+(13, 'encore un message', 4, '2020-06-04'),
 (3, 'toutaoejfaef', 4, '2020-06-03'),
-(4, 'faefaf', 4, '2020-06-03'),
-(5, '5', 4, '2020-06-03'),
-(6, '6', 4, '2020-06-03'),
-(7, '7', 5, '2020-06-03');
+(14, 'supprime moi s\'il te plaÃ®t', 5, '2020-06-04'),
+(7, '7', 5, '2020-06-03'),
+(9, 'dernier message', 5, '2020-06-03'),
+(10, 'c coool', 5, '2020-06-03'),
+(11, 'c\'est trop gÃ©niaaaaaaal', 5, '2020-06-03'),
+(20, 'Oui faut le supprimer !!!! haha', 4, '2020-06-04');
 
 -- --------------------------------------------------------
 
