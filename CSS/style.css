@@ -188,11 +188,11 @@ input
         color: rgb(1, 124, 73);
     }
 /* Suppression */
-#target_sup
+.sup_msg_t
     {
         display: none;
     }
-#target_sup:target
+.sup_msg_t:target
     {
         display: flex;
         flex-direction: column;
@@ -207,14 +207,14 @@ input
         border: 1px solid rgb(1, 124, 73);
         border-radius: 10px;
     }
-#target_sup section
+.sup_msg_t section
     {
         display: flex;
         flex-direction: row;
         width: 50%;
         justify-content: space-evenly;
     }
-#target_sup a
+.sup_msg_t a
     {
         text-decoration: none;
     }
