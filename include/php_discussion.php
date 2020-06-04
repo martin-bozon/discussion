@@ -20,7 +20,15 @@
                             <section id="message_user">
                                 <h4 class="info_msg"><?php echo $message["login"];?> le <i><?php echo $date;?></i> :</h4>
                                 <p id="user_message"><?php echo $message["message"];?></p>
-                                <a href="include/suppression.php?id_message=<?php echo $message["id"];?>">imgage</a>
+                                <a href="#target_sup"><img src="image/trash.png" alt="supression"></a>
+                                <section id="target_sup">
+                                    <h2>Supprimer ce message ?</h2>
+                                    <p><i>"<?php echo $message["message"];?>"</i></p>
+                                    <section>
+                                        <a href="discussion.php"><p>Non</p></a>
+                                        <a href="include/suppression.php?id_message=<?php echo $message["id"];?>"><p>Oui</p></a>
+                                    </section>                                    
+                                </section>
                             </section>
                     <?php
                         }
