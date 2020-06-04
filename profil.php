@@ -30,7 +30,7 @@
                 <label for="conf_password"><h3>Confirmer le mot de passe :</h3></label>
                 <input type="password" id="conf_password" name="conf_password"/>
 
-                <input type="submit" value="Modifier" name="validmod"/>
+                <input type="submit" value="Modifier" name="validmod" class="bouton"/>
                 
                 <?php                     
                     if(isset($msg_login))

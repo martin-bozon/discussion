@@ -24,7 +24,7 @@
                 <label for="password"><h3>Mot de passe :</h3></label>
                 <input type="password" id="password" name="password" required/>
 
-                <input type="submit" value="Connexion" name="validco"/>
+                <input type="submit" value="Connexion" name="validco" class="bouton"/>
 
                 <?php if(isset($msg_error))
                         {
