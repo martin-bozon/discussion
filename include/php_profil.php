@@ -40,6 +40,10 @@
                                             $_SESSION["password"] = $mdp_hash;                                         
                                             $msg_mdp = "Mot de passe modifié";
                                         }
+                                    else
+                                        {
+                                            $msg_error = "Les mots de passe sont différents";
+                                        }
                                 }                          
                         }
                     else    
